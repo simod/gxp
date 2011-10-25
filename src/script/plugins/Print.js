@@ -55,7 +55,7 @@ gxp.plugins.Print = Ext.extend(gxp.plugins.Tool, {
     /** api: config[includeLegend]
      *  ``Boolean`` Should we include the legend in the print? Defaults to false.
      */
-    includeLegend: false,
+    includeLegend: true,
 
     /** api: config[menuText]
      *  ``String``
@@ -225,6 +225,7 @@ gxp.plugins.Print = Ext.extend(gxp.plugins.Tool, {
                             mapTitle: this.target.about && this.target.about["title"],
                             comment: this.target.about && this.target.about["abstract"],
                             minWidth: 336,
+                            legend:new GeoExt.LegendPanel(),
                             printMapPanel: {
                                 height: Math.min(450, Ext.get(document.body).getHeight()-150),
                                 autoWidth: true,
